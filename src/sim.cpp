@@ -1,7 +1,7 @@
 #include <cmath>
-#include "include/ativo.hpp"
-#include "include/sim.hpp"
-#include "include/ativo.hpp"
+#include "ativo.hpp"
+#include "sim.hpp"
+#include "ativo.hpp"
 
 double calcularTotal(const std::vector<Ativo>& ativos) {
     double soma = 0.0;

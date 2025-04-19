@@ -1,10 +1,18 @@
 #include <iostream>
 #include <cmath>
-#include "include/ativo.hpp"
-#include "include/sim.hpp"
+#include "ativo.hpp"
+#include "sim.hpp"
+#include "AportSimConfig.h"
 
+void version()
+{
+  std::cout << "Version : " << APORTSIM_VERSION_MAJOR <<
+    "." << APORTSIM_VERSION_MINOR <<
+    "." << APORTSIM_VERSION_PATCH << std::endl;
+}
 
 int main() {
+    version();
     int n;
     std::vector<Ativo> ativos;
 
@@ -13,7 +21,7 @@ int main() {
     ativos.resize(n);
 
     for (int i = 0; i < n; ++i) {
-        std::cout << "Nome do ativo:" << i + 1 << ": ";
+        std::cout << "Nome do ativo:" << i + 1;
         std::cin >> ativos[i].nome;
         std::cout << "Valor atual:";
         std::cin >> ativos[i].current;
